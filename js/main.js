@@ -29,13 +29,15 @@ createApp({
             this.todoList.splice(index, 1);
         },
         addTodo() {
-            this.todoList.push(
-                {
-                    text: this.newTodo,
-                    done:false
-                }
-            );
-            this.newTodo = '';
+            if(this.newTodo.trim() !== '') {
+                this.todoList.push(
+                    {
+                        text: this.newTodo,
+                        done:false
+                    }
+                );
+                this.newTodo = '';
+            }
         },
         barTodo(index) {
             const item = this.todoList[index];
