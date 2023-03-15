@@ -56,7 +56,7 @@ li:hover {
     cursor: pointer;
 }
 
-.line-through {
+.done {
     text-decoration: line-through;
     color:#0e1c36;
     background-image: none;

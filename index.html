@@ -22,11 +22,11 @@
     <div id="app">
         <!-- main container -->
         <div class="container">
-            <h1>Todo list</h1>
+            <h1>{{ title }}</h1>
             <!-- list container -->
             <div class="ul-container">
                 <ul>
-                    <li>Completare l'esercizio</li>
+                    <li v-for="todo in todoList" :class="{done : todo.done === true}">{{ todo.text }}</li>
                 </ul>
             </div>
             <!-- /list container -->
