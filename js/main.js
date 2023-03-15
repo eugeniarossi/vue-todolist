@@ -6,6 +6,7 @@ createApp({
     data() {
         return {
             title: 'Todo List',
+            newTodo: '',
             todoList: [
                 {
                     text: "Completare l'esercizio",
@@ -26,6 +27,15 @@ createApp({
     methods: {
         deleteTodo(index) {
             this.todoList.splice(index, 1);
+        },
+        addTodo() {
+            this.todoList.push(
+                {
+                    text: this.newTodo,
+                    done:false
+                }
+            );
+            this.newTodo = '';
         }
     }
 }).mount('#app');

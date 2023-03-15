@@ -35,8 +35,8 @@
             <!-- /list container -->
             <!-- input container -->
             <div class="input-container">
-                <input type="text" id="text-input">
-                <button type="button" id="add-button">Aggiungi</button>
+                <input type="text" id="text-input" v-model="newTodo">
+                <button type="button" id="add-button" @click="addTodo">Aggiungi</button>
             </div>
             <!-- /input container -->
         </div>

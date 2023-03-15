@@ -55,6 +55,8 @@ li {
 
 .todo-content {
     flex-grow: 1;
+    overflow-x: hidden;
+    margin-right: .625rem;
 }
 
 li:hover {
@@ -94,7 +96,7 @@ li:hover {
     border: .0625rem solid #4e58a0;
     padding: 0 .625rem;
     color: #f4fcff;
-    font-family: 'Tilt Neon', cursive;
+    font-family: 'Roboto', sans-serif;
     flex-grow: 1;
 }
 
