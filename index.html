@@ -26,7 +26,10 @@
             <!-- list container -->
             <div class="ul-container">
                 <ul>
-                    <li v-for="todo in todoList" :class="{done : todo.done === true}">{{ todo.text }}</li>
+                    <li v-for="(todo, index) in todoList" :class="{doneLi : todo.done === true}">
+                        <div class="todo-content" :class="{done : todo.done === true}">{{ todo.text }}</div>
+                        <i class="fa-solid fa-square-xmark" @click="deleteTodo(index)"></i>
+                    </li>
                 </ul>
             </div>
             <!-- /list container -->
