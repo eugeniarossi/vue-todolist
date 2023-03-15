@@ -34,7 +34,7 @@
             </div>
             <!-- /list container -->
             <!-- input container -->
-            <div class="input-container">
+            <div class="input-container" @keyup.enter="addTodo">
                 <input type="text" id="text-input" v-model="newTodo">
                 <button type="button" id="add-button" @click="addTodo">Aggiungi</button>
             </div>
