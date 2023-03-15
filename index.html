@@ -1,4 +1,5 @@
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -10,27 +11,35 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
     <!-- /import google font -->
     <!-- font awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+        integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <!-- css -->
     <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
-    <div class="container">
-        <h1>Todo list</h1>
-        <!-- list container -->
-        <div class="ul-container">
-            <ul>
-                <li>Completare l'esercizio</li>
-            </ul>
+    <div id="app">
+        <!-- main container -->
+        <div class="container">
+            <h1>Todo list</h1>
+            <!-- list container -->
+            <div class="ul-container">
+                <ul>
+                    <li>Completare l'esercizio</li>
+                </ul>
+            </div>
+            <!-- /list container -->
+            <!-- input container -->
+            <div class="input-container">
+                <input type="text" id="text-input">
+                <button type="button" id="add-button">Aggiungi</button>
+            </div>
+            <!-- /input container -->
         </div>
-        <!-- /list container -->
-        <!-- input container -->
-        <div class="input-container">
-            <input type="text" id="text-input">
-            <button type="button" id="add-button">Aggiungi</button>
-        </div>
-        <!-- /input container -->
+        <!-- /main container -->
     </div>
+
     <!-- vuejs -->
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
     <!-- /vuejs -->
@@ -38,4 +47,5 @@
     <script src="js/main.js"></script>
     <!-- /js -->
 </body>
+
 </html>
