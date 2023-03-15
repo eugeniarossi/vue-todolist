@@ -8,6 +8,10 @@ RESET
     box-sizing: border-box;
 }
 
+[v-cloak] {
+    display: none;
+}
+
 body {
     background-color: #0e101f;
     font-family: 'Roboto', sans-serif;
