@@ -36,6 +36,14 @@ createApp({
                 }
             );
             this.newTodo = '';
+        },
+        barTodo(index) {
+            const item = this.todoList[index];
+            if(item.done === false) {
+                item.done = true;
+            } else {
+                item.done = false;
+            }
         }
     }
 }).mount('#app');
