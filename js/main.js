@@ -7,6 +7,8 @@ createApp({
         return {
             title: 'Todo List',
             newTodo: '',
+            //searchKey: '',
+            //newTodoList: [],
             todoList: [
                 {
                     text: "Completare l'esercizio",
@@ -27,13 +29,14 @@ createApp({
     methods: {
         deleteTodo(index) {
             this.todoList.splice(index, 1);
+            console.log(this.todoList);
         },
         addTodo() {
-            if(this.newTodo.trim() !== '') {
+            if (this.newTodo.trim() !== '') {
                 this.todoList.push(
                     {
                         text: this.newTodo,
-                        done:false
+                        done: false
                     }
                 );
                 this.newTodo = '';
@@ -41,7 +44,7 @@ createApp({
         },
         barTodo(index) {
             const item = this.todoList[index];
-            if(item.done === false) {
+            if (item.done === false) {
                 item.done = true;
             } else {
                 item.done = false;

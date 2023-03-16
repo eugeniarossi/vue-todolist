@@ -25,20 +25,27 @@
             <h1>{{ title }}</h1>
             <!-- list container -->
             <div class="ul-container">
-                <ul>
-                    <li v-for="(todo, index) in todoList" :class="{doneLi : todo.done === true}">
-                        <div class="todo-content" :class="{done : todo.done === true}" @click="barTodo(index)">{{ todo.text }}</div>
-                        <i class="fa-solid fa-square-xmark" @click="deleteTodo(index)"></i>
+                <ul v-if="todoList.length > 0">
+                    <li v-for="(todo, index) in todoList" :class="{doneLi : todo.done === true}" @click="barTodo(index)">
+                        <div class="todo-content" :class="{done : todo.done === true}">{{ todo.text }}</div>
+                        <i class="fa-solid fa-square-xmark" @click.stop="deleteTodo(index)"></i>
                     </li>
                 </ul>
+                <div v-else id="message">Todo list vuota</div>
             </div>
             <!-- /list container -->
-            <!-- input container -->
+            <!-- add input container -->
             <div class="input-container" @keyup.enter="addTodo">
                 <input type="text" id="text-input" v-model="newTodo">
                 <button type="button" id="add-button" @click="addTodo">Aggiungi</button>
             </div>
-            <!-- /input container -->
+            <!-- /add input container -->
+            <!-- search container --><!--
+            <div class="input-container">
+                <input type="text" id="text-input" v-model="searchKey" @keyup="search">
+                <i class="fa-solid fa-magnifying-glass" id="search-icon"></i>
+            </div>-->
+            <!-- /search container -->
         </div>
         <!-- /main container -->
     </div>
